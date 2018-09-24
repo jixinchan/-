@@ -1,0 +1,68 @@
+<!-- 用js写的
+<html>
+<div id="wrap">
+  <form action="#" method="get">
+    <input type="text" id="add" name="todo" placeholder="添加待办事项" onkeydown="javascript:if(event.keyCode==13) document.getElementById('btn')"/>
+    <button (click)="fun1()" id="btn">添加</button>
+    <div class="d1">
+      待办事件：<p [innerHtml]="a"></p>
+      <ul id="list1">
+        
+      </ul>
+    </div>
+    <div class="d1">
+      完成事件：<p [innerHtml]="b"></p>
+      <ul id="list2">
+
+      </ul>
+    </div>
+  </form>
+</div>
+</html> -->
+
+
+<!-- <input type="text" [(ngModel)]="txt" (keydown)="getValue($event)">
+<h3>正在进行<span>{{arr.length}}</span></h3> 
+<ul>
+  <li *ngFor="let item of arr; let i=index">
+    <div *ngIf="!item.done">
+      <input type="checkbox" (click)="change(i)">
+      {{item.title}}
+      <button (click)="delete(i)">删除</button>
+    </div>
+  </li>
+</ul>
+<h3>已经完成<span>{{arr.length}}</span></h3>
+<ul>
+  <li *ngFor="let item of arr; let i=index">
+      <div *ngIf="item.done">
+          <input type="checkbox" (click)="change(i)" checked>
+          {{item.title}}
+          <button (click)="delete(i)">删除</button>
+      </div>
+  </li>
+</ul> -->
+
+
+<!-- 用ng-container实现不显示列表标志 -->
+<input type="text" [(ngModel)]="txt" (keydown)="getValue($event)">
+<h3>正在进行<span>{{alength}}</span></h3> 
+<ul>
+  <ng-container *ngFor="let item of arr; let i=index">
+    <li *ngIf="!item.done">
+      <input type="checkbox" (click)="change(i)">
+      {{item.title}}
+      <button (click)="delete(i)">删除</button>
+    </li>
+  </ng-container>
+</ul>
+<h3>已经完成<span>{{arr.length-alength}}</span></h3>
+<ul>
+  <ng-container *ngFor="let item of arr; let i=index">
+    <li *ngIf="item.done">
+      <input type="checkbox" (click)="change(i)" checked>
+      {{item.title}}
+      <button (click)="delete(i)">删除</button>
+    </li>
+  </ng-container>
+</ul>
