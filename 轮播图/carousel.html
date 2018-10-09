@@ -4,45 +4,118 @@
 	<title></title>
 	<meta charset="utf-8">
 	<style type="text/css">
-		#pic{
-			display: flex;
-		}
 		#box{
 			width: 1200px;
-			overflow: hidden;
-			margin: 60px;
-			position: relative;
+		    height: 400px;
+		    margin:100px auto;
+		    position: relative;
+		    overflow: hidden;
+		    border: 1px solid green;
+		}
+		#pic_box {
+		    width: 1200px;
+		    height: 400px;
+		}
+		#pic{
+			width: 1200px;
+		    height: 400px;
 		}
 		img{
+			width: 100%;
+			height: 100%
+		}
+		li{
+			position: absolute;
+			left: 0;
+			top: 0;
 			width: 1200px;
 			height: 400px;
+		}
+		#slider{
+		    text-align: center;
+		    padding-top: 25px;
+		}
+		.slider_prev,.slider_next {
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -35px;
+		    font-size: 50px;
+		    opacity: 0.8;
+		    color: white;
+		    cursor: pointer;
+		}
+		.slider_prev{
+		    left: 0;
+		}
+		.slider_next {
+		    right: 0;
+		    background-position: -6px -44px;
+		}
+		.slider_dot {
+		    width: 24px;
+		    height: 20px;
+		    display:inline-block;
+		    background:white;
+		    cursor: pointer;
+		    overflow: hidden;
+		    position: relative;
+		    bottom: 70px
 		}
 	</style>
 </head>
 <body>
 <div id="box">
-	<ul id="pic">
-		<li><img src="imgs/banner_00.gif"></li>
-		<li><img src="imgs/banner_01.jpg"></li>
-		<li><img src="imgs/banner_02.jpg"></li>
-		<li><img src="imgs/banner_03.jpg"></li>
-		<li><img src="imgs/banner_04.jpg"></li>
-		<li><img src="imgs/banner_00.gif"></li>
-	</ul>
+	<div id="pic_box">
+		<ul id="pic">
+			<li><img src="imgs/banner_00.gif"></li>
+			<li><img src="imgs/banner_01.jpg"></li>
+			<li><img src="imgs/banner_02.jpg"></li>
+			<li><img src="imgs/banner_03.jpg"></li>
+			<li><img src="imgs/banner_04.jpg"></li>
+			<li><img src="imgs/banner_00.gif"></li>
+		</ul>
+	</div>
+	<div id="slider">
+		<span class="slider_prev"><</span>
+		<span class="slider_next">></span>
+		<span class="slider_dot"></span>
+		<span class="slider_dot"></span>
+		<span class="slider_dot"></span>
+		<span class="slider_dot"></span>
+		<span class="slider_dot"></span>
+	</div>
 </div>
 <script type="text/javascript">
 	//自动播放
 	window.onload = function(){
 		var pic = document.getElementById('pic');
 		var pics = document.getElementById('pic').children;
+		var spans = document.getElementsByTagName('span');
 		var picI = 0;
-		if(picI == pics.length-1){
-			picI = 0;
-			pic.style.marginLeft = 0;
+		// console.log(spans);
+		for(var k in spans){
+			spans[k].onclick = function(){
+				// console.log(spans[k]);
+				if(this.className == "slider_prev"){
+					// console.log("lll");
+					var leftw = (picI) * 1200 ;
+					console.log(leftw);
+					animate(pics[picI],{left:leftw});
+					--picI<0?picI = pics.length - 1 : picI;
+					pics[picI].style.left = -leftw+'px';
+					animate(pics[picI],{left:0});
+				}
+				if(this.className == "slider_next"){
+					// console.log("lll");
+					var leftw = -(picI) * 1200 ;
+					console.log(leftw);
+					animate(pics[picI],{left:leftw});
+					--picI<0?picI = pics.length - 1 : picI;
+					pics[picI].style.left = -leftw+'px';
+					animate(pics[picI],{left:0});
+				}
+			}
 		}
-		picI++;
-		var left = -(picI) * 1200 + 'px';
-		animate(pic,{'margin-left':left});
 	}
 	
 
