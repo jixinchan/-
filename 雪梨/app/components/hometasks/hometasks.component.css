@@ -1,0 +1,44 @@
+.t_mark{
+    float: right;
+    color: red;
+    font-size: 20px;
+}
+.t_name{
+    margin: 0 20px 0 5px;
+}
+.t_form{
+    display: block;
+    float: right;
+}
+.task_list li{
+    margin: 20px 0 20px 0;
+    border: 1px solid #ddd;
+}
+.t_l_name{
+    padding: 10px;
+}
+.task_list li p span{
+    /* display: block; */
+    width: 60px;
+    /* float: right; */
+}
+.t_l_content{
+    display: none;
+}
+.t_stat{
+    color: #f1a325;
+    background: none;
+    border: 1px solid #f1a325;
+}
+.t_l_tail{
+    padding-left: 10px;
+    font-size: 13px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    line-height: 30px;
+}
+.t_right{
+    float: right;
+}
+
+

@@ -1,0 +1,32 @@
+<!-- <div>
+  <input checked type="text" (change)="change($event)">
+</div>
+<div [ngSwitch]="num">
+  <div *ngSwitchCase='1'>1</div>
+  <div *ngSwitchCase='2'>2</div>
+  <div *ngSwitchCase='3'>3</div>
+</div>
+<p>{{jsonObject|json}}</p> -->
+
+
+<div class="container">
+  <div class="left">
+    <div class="toux">
+      <img src="assets/imgs/toux.jpg"/>
+      <p>6-季新婵</p>
+      <div><span><h2>1</h2>粉丝</span><span><h2>1</h2>关注</span></div>
+    </div>
+    <ul class="home_list">
+      <li><a [routerLink]="['./hometasks']">任务</a><span>></span></li>
+      <li><a [routerLink]="['./hometongbu']">同步课</a><span>></span></li>
+      <li><a [routerLink]="['./homecourses']">课程</a><span>></span></li>
+      <li><a [routerLink]="['./homegossip']">且说</a><span>></span></li>
+      <li><a [routerLink]="['./homenoti']">通知</a><span>></span></li>
+    </ul>
+  </div> 
+  <div class = "right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

@@ -1,0 +1,34 @@
+.wrap{
+    padding-bottom: 70px;
+    height: 100%;
+    min-width: 300px;
+}
+.workplace{
+    padding: 35px 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+}
+.top-banner{
+    text-align: center;
+    margin-bottom: 20px;   
+}
+.top-banner img{
+    width: 700px;
+    height: 280px;
+}
+.art-info{
+    height: 36px;
+    line-height: 36px;
+    margin: 30px auto;
+    color: gray;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.art-info span{
+    float: right;
+}
+.arc-body{
+    line-height: 50px;
+    padding: 5px 15px;
+}

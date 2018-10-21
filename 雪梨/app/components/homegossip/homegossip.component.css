@@ -1,0 +1,25 @@
+.input_head{
+    border:1px solid gainsboro;
+    width: 750px;
+    height: 140px;
+    margin: 15px auto 35px auto ;
+}
+.input_head li{
+    float: left;
+    font-size: 16px;
+    width: 40px;
+    margin: 5px;
+}
+.input_head textarea{
+    width: 750px;
+    height: 110px;
+    border:1px solid gainsboro;
+    display: block;
+    clear: both;
+}
+.input_head button{
+    float: right;
+    width: 50px;
+    background: orange;
+    margin: 5px;
+}

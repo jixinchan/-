@@ -1,0 +1,9 @@
+
+.container li{
+    float: left;
+    margin-right: 5px;
+}
+span{
+    display: inline-block;
+    width: 50px;
+}

@@ -1,0 +1,19 @@
+<div class="container_right">
+  <ul class="task_header">
+    <li>未提交</li>
+    <li>已完成</li>
+    <li>已完结</li>
+    <form class="t_form">
+      <input type="text" placeholder="输入同步课名称搜索">      
+      <button >搜索</button>
+    </form>  
+  </ul>
+  <ul class="task_list">
+    <li *ngFor = 'let task of tasks'>
+      <a [routerLink]="['/tasks',task.id]"><p class="t_l_name"><span class="t_name">{{task.taskName}}</span><span class="t_stat">将于{{task.time}}截止</span><span class="t_mark">{{task.mark}}分</span></p></a>
+      <p class="t_l_content" id="p1">{{task.content}}</p>
+      <p class="t_l_tail">{{task.course}}<span class="t_right">▽</span><span class="t_right">Look</span></p>
+    </li>
+  </ul>
+</div>
+

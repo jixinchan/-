@@ -1,0 +1,19 @@
+<div class="wrap">
+  <div class="workplace">
+    <div class="top-banner">
+      <img src="{{article?.images}}" alt="">      
+    </div>
+    <div class="art-title">
+      <h1>{{article?.aName}}</h1>
+      <div class="art-info">
+        {{article?.teacher}}编辑于{{article?.time}}<span>阅读量{{article?.readers}}</span>
+      </div>
+    </div>
+    <div class="arc-body">
+      <p *ngFor="let para of paras">
+        {{para.src}}
+      </p>
+    </div>
+  </div>
+  
+</div>

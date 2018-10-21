@@ -1,0 +1,18 @@
+.t_list li{
+    height:80px;
+    line-height: 30px
+}
+.t_name{
+    font-size: 20px;
+}
+.t_right{
+    float: right;
+    color: red;
+}
+.t_detail{
+    font-size: 13px;
+}
+.t_left{
+    display:inline-block;
+    margin: 0 10px;
+}

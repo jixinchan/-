@@ -1,0 +1,29 @@
+nav{
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    background: #f7f7f7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    line-height: 50px;
+    text-align: center;
+};
+#header{
+    width: 80%;   
+    margin: 0 auto;
+}
+#h_brand{
+    float: left;
+    width: 12%;
+    margin: 7px 18% 7px 11%;
+}
+#h_brandi{   
+    width:105px;
+    height:30px;
+}
+.h_list {
+    float: inherit;
+}
+.h_list li{
+    float: left;
+    margin: 0 15px;
+}

@@ -1,0 +1,34 @@
+.left{
+    float: left;
+}
+img{
+    width: 160px;
+    height: 180px;
+}
+.toux{
+    border-bottom: 2px solid gainsboro;
+}
+.toux p{
+    font-size: 18px;
+    text-align: center;
+}
+.home_list{
+    margin: 20px;
+}
+.home_list li{
+    height: 30px;
+}
+.home_list span{
+    float: right;
+}
+.right{
+    float: left;
+}
+a:active{
+    color: orange;
+}
+span{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}

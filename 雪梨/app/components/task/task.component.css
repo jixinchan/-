@@ -1,0 +1,36 @@
+.taskname{
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+.content{
+    margin: 20px auto;
+    padding: 10px;
+}
+.t_right{
+    float: right;
+    color: red;
+}
+.t_detail{
+    font-size: 13px;
+}
+.t_left{
+    display:inline-block;
+    margin: 0 10px;
+}
+.t_li{
+    margin: 5px 5px;
+    padding: 2px;
+    height: 20px;
+    font-size: 20px;
+    border-left: 5px solid orange;
+}
+.t_ct{
+    height: 200px;
+}
+.txtarea{
+    width: 90%;
+    height: 150px;
+    border: 1px solid gray;
+    margin: 12px;
+}

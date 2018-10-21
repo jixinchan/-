@@ -1,0 +1,13 @@
+<div class="container">
+  <h3>同步课/{{course?.courseName}}</h3>
+  <ul class="list">
+    <li><a [routerLink] = "['./cinto']">简介</a></li>
+    <li><a [routerLink] = "['./gossip']">互动</a></li>
+    <li><a [routerLink] = "['./tasks']">任务{{course?.task}}</a></li>
+    <li><a [routerLink] = "['./members']">成员{{course?.person}}</a></li>
+  </ul>
+</div>
+
+<div class="main_box" >
+  <router-outlet></router-outlet>
+</div>

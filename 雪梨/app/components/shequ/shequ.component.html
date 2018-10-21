@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="shequ_left">
+    <ul>
+      <li *ngFor="let item of list">
+        <div class="item-img">
+            <img src="assets/imgs/toux.jpg"/>
+        </div>
+        <div class="item-text">
+          <a [routerLink] = "['/article',item.id]">
+            <div class="item-content">
+              <div class="article-banner">
+                <img class="img" src="{{item?.images}}">
+              </div>
+              <div class="article-body">
+                <div class="article-title">{{item?.aName}}</div>
+                <div class="article-excerpt">{{item?.content}}</div>
+               </div>
+             </div>
+          </a>
+          
+          <div class="item-footer">
+            <span>{{item?.teacher}}•</span>
+            <span>{{item?.time}}</span>
+            <div class="footer-butt">
+              <span>阅读•{{item?.readers}}</span>|
+              <span>评论•{{item?.comments}}</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="shequ_right">
+    <h4>热门话题</h4>
+    <ul>
+      <li *ngFor="let titem of tlist">
+        #{{titem.tName}}#
+      </li>
+    </ul>
+  </div>
+</div>

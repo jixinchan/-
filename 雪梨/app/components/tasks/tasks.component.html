@@ -1,0 +1,11 @@
+<div class="container">
+  <ul class="t_list">
+    <li *ngFor = 'let task of tasks'>
+      <div class = 't_name'><a [routerLink]="['./',task.id]"><span>{{task.taskName}}</span></a><span class="t_right">{{task.mark}}分</span></div>
+      <div class="t_detail"><span class="t_left">{{task.teacher}}</span>发布于<span class="t_left">{{task.time}}</span><span class="t_right">{{task.stat}}</span></div>
+    </li>
+  </ul>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

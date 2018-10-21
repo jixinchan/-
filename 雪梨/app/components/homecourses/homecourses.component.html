@@ -1,0 +1,13 @@
+<div class="container_right">
+  <div *ngFor = 'let hcourse of hcourses' class="cour_list">
+    <img src = '{{hcourse.images}}'>
+    <h5 class="cour_name">{{hcourse.courseName}}</h5>
+    <div  class="cour_intro">
+        <span>{{hcourse.intro}}</span>
+    </div>
+    <div class="cour_bottom">
+      <span>人数{{hcourse.person}}</span><span>任务{{hcourse.task}}</span>
+    </div>
+  </div>
+
+</div>

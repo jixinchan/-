@@ -1,0 +1,21 @@
+<div class="container_right"> 
+  <ul class="task_header">
+    <li>我加入的</li>
+    <form class="t_form">
+      <input type="text" placeholder="输入同步课名称搜索">      
+      <button >搜索</button>
+    </form>  
+  </ul>
+  <ul id="tongbu_list">
+    <li *ngFor = 'let course of courses'>
+      <a [routerLink]="['/tongbu/',course.id]"><img src="{{course.images}}" alt="" ></a>
+      <div class="cmsg">
+        <span class="c_name">{{course.courseName}}</span><br>
+        <span class="c_tail">任务{{course.task}}      人数{{course.person}}</span>
+      </div>
+      <div>
+        
+      </div>      
+    </li>
+  </ul>
+</div>

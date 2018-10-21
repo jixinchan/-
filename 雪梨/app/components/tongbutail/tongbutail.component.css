@@ -1,0 +1,12 @@
+
+.list{
+    height: 20px;
+    margin: 20px auto 10px auto;
+    padding: 8px;
+    border-bottom: 2px solid gainsboro;
+}
+.list li{
+    width: 100px;
+    height: 40px;
+    float:left;
+}
