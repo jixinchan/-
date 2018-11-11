@@ -1,0 +1,39 @@
+page-mine {   
+    ion-header{
+        width: 100%;
+        height: 25%;
+        background: url(../../assets/imgs/5我的-bg_02.png);
+        #above{
+            width: 90px;
+            height: 100px;
+            position: relative;
+            top: 16%;
+            left: 39%;
+            p{
+                font-size: 16px;
+                text-align: center;
+            }
+            #toux{
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background: url(../../assets/imgs/5-我的-头像.png);    
+            }
+        }    
+    }
+    ion-content{
+        #wrap{
+            background-color: #eeeeee;
+            .col1{
+                background-color: yellow;
+            }
+            ion-col{
+                background-color: white;
+                height: 100px;
+                text-align: center;
+                margin: 3px 2px;              
+            }  
+        }
+        
+    }
+}

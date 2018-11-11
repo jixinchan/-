@@ -1,0 +1,113 @@
+
+<ion-header>
+
+  <ion-navbar color='yel'>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      <img src="../../assets/imgs/首页-01.png" alt="">
+    </ion-title>
+    <ion-buttons end>
+      <ion-icon name='search'></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="tabs" no-border activated>
+      <ion-segment-button value="recommend" >
+        推荐
+      </ion-segment-button>
+      <ion-segment-button value="furnishing">
+        家居
+      </ion-segment-button>
+      <ion-segment-button value="kitchen">
+        餐厨
+      </ion-segment-button>
+      <ion-segment-button value="bed">
+        床上用品
+      </ion-segment-button>
+    </ion-segment>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div [ngSwitch]='tabs'>
+    <div *ngSwitchCase ="'recommend'">
+      <ion-slides loop pager autoplay=2000>
+        <ion-slide><img src="../../assets/imgs/1首页-banner_02.png"/></ion-slide>
+        <ion-slide><img src="../../assets/imgs/1首页-banner_02.png"/></ion-slide>
+        <ion-slide><img src="../../assets/imgs/1首页-banner_02.png"/></ion-slide>
+      </ion-slides>
+      <ion-title>热|门|推|荐</ion-title>
+      <ion-title><img src="../../assets/imgs/首页-recommand.png"/></ion-title>
+      <div padding>
+        <ion-row>
+          <ion-col><img src="../../assets/imgs/1首页_03.png"/></ion-col>
+          <ion-col><img src="../../assets/imgs/1首页_05.png"/></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><img src="../../assets/imgs/1首页_09.png"/></ion-col>
+          <ion-col><img src="../../assets/imgs/1首页_10.png"/></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col><img src="../../assets/imgs/1首页_09.png"/></ion-col>
+            <ion-col><img src="../../assets/imgs/1首页_10.png"/></ion-col>
+          </ion-row>
+      </div>
+      
+    </div>
+    <div *ngSwitchCase ="'furnishing'">
+      <ion-slides loop pager autoplay=2000>
+        <ion-slide><img src="../../assets/imgs/2家居页-banner_02.png"/></ion-slide>
+        <ion-slide><img src="../../assets/imgs/2家居页-banner_02.png"/></ion-slide>
+        <ion-slide><img src="../../assets/imgs/2家居页-banner_02.png"/></ion-slide>
+      </ion-slides>
+      <div padding>
+        <ion-row>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-rec_03.png"/>
+            <p class="rec">客厅</p>
+          </ion-col>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-rec_05.png"/>
+            <p class="rec">书房</p>
+          </ion-col>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-rec_07.png"/>
+            <p class="rec">门厅</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-title>桔|子|家|居</ion-title>
+      <ion-title><img src="../../assets/imgs/2-家居页-标题.png"/></ion-title>
+      <div padding>
+        <ion-row>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-bottom_03.png"/>
+            <p class='tail'> -欧式全实木花几- RMB 650</p>
+          </ion-col>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-bottom_05.png"/>
+            <p class='tail'> -现代简约早餐桌- RMB 650</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-bottom_03.png"/>
+            <p class='tail'> -欧式全实木花几- RMB 650</p>
+          </ion-col>
+          <ion-col>
+            <img src="../../assets/imgs/2家居页-bottom_05.png"/>
+            <p class='tail'> -现代简约早餐桌- RMB 650</p>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div *ngSwitchCase ="'kitchen'">这是餐厨</div>
+    <div *ngSwitchCase ="'bed'">这是床上用品</div>
+  </div>
+</ion-content>
+

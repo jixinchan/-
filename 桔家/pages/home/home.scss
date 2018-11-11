@@ -1,0 +1,27 @@
+page-home {
+    ion-content{
+        ion-col{
+            position: relative;
+            .rec{
+                font-size: 18px;
+                color: white;
+                letter-spacing: 3px;
+                position: absolute;
+                bottom: 28px;
+                left: 35px;
+            }
+            .tail{
+                font-size: 9px;
+                font-weight: bold;
+                color: white;
+                width: 155px;;
+                height: 30px;
+                line-height: 30px;
+                position: absolute;
+                bottom: 1px;
+                background: rgba(0,0,0,.3);
+            }
+        }
+        
+    }
+}
